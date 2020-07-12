@@ -1,0 +1,275 @@
+/*
+   Nihao - Norbert's HAwhaw Objects for the Iphone
+
+   Version 1.0 (requires hawhaw.inc V5.21 or higher)
+   
+   $Date: 2008/07/23 17:21:02 $
+   
+   (C) Norbert Huffschmid 2008
+   http://www.hawhaw.de/
+      
+   License: see http://nihao.hawhaw.de/LICENSE.TXT
+
+   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+   POSSIBILITY OF SUCH DAMAGE.
+*/
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #FFFFFF;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  color: #222222;
+  font-size: 12pt;
+  font-family: Helvetica, Arial, Verdana, sans serif;
+  line-height: 1.4em;
+  height: 100%;
+}
+
+#skin {
+  margin: 0px auto;
+  padding: 0px;
+  text-align: left;
+  width: 406px;
+  height: 744px;
+  
+  /* better to be replaced with a local image */
+  background-image: url(http://nihao.hawhaw.de/skin.png);
+}
+
+#display {
+  position: relative;
+  top: 157px;
+  left: 44px;
+  width: 320px;
+  height: 460px;
+  overflow: auto;
+}
+
+div#canvas {
+  margin: 0px;
+  padding: 43px 0 0 0;
+}
+
+div.panel#display {
+  background: #c8c8c8 url(pinstripes.png);
+}
+
+div.panel#canvas {
+  background: #c8c8c8 url(pinstripes.png);
+  min-height: 100%;
+}
+
+div.peekaboo {
+  /* required due to MSIE Peekaboo bug */
+  height: 100%;
+}
+
+span.panel {
+  margin: 2px;
+  font-size: inherit;
+  font-weight: bold;
+  color: #4d4d70;
+  text-shadow: rgba(255, 255, 255, 0.75) 2px 2px 0;
+}
+	
+span#hawcsshook1 {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 0;
+  width: 100%;
+  height: 43px;
+  border-top: 1px solid #7d7d7d;
+  border-bottom: 1px solid #999999;
+  background: url(toolbar.png) repeat-x;
+}
+
+span.listGroup {
+  display: block;
+  position: relative;
+  top: -1px;
+  margin: 0 0 -2px 0;
+  width: auto;
+  border-top: 1px solid #7d7d7d;
+  border-bottom: 1px solid #999999;
+  padding: 1px 10px;
+  background: url(listGroup.png) repeat-x;
+  font-size: 17px;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+  color: #FFFFFF;
+}
+
+span.toolbar {
+  position: absolute;
+  top: 8px;
+  overflow: hidden;
+  left: 50%;
+  margin: 1px 0 0 -75px;
+  font-size: 16px;
+  width: 150px;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #FFFFFF;
+}
+
+span.iLink a,
+#hawlinkset a {
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  margin: -1px 0 0 0;
+  padding: 8px 28px 8px 6px;
+  width: auto;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-position: right;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  color: #111;
+  background-image: url(listArrow.png);
+  background-color: #fff;
+}
+
+span.iLink a:active,
+span.iLink a:hover,
+#hawlinkset a:active,
+#hawlinkset a:hover {
+  color: #EEEEEE;
+  background-image: url(listArrowSel.gif);
+  background-color: #2222FF;
+}
+
+span.backButton a,
+span.toolButton a,
+span.leftButton a,
+input#hawinputsubmit {
+  position: absolute;
+  overflow: hidden;
+  top: 6px;
+  margin: 0;
+  border-width: 0 5px;
+  padding: 0;
+  width: auto;
+  max-width: 70px;
+  height: 30px;
+  line-height: 30px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  white-space: nowrap;
+  background: none;
+  z-index: 1;
+}
+
+span.backButton a {
+  left: 6px;
+  border-width: 0 8px 0 14px;
+  border-image: url(backButton.png) 0 8 0 14;
+  -webkit-border-image: url(backButton.png) 0 8 0 14;
+}
+
+span.toolButton a {
+  right: 6px;
+  border-width: 0 5px;
+  -webkit-border-image: url(toolButton.png) 0 5 0 5;
+}
+
+span.leftButton a {
+  left: 6px;
+  border-width: 0 5px;
+  -webkit-border-image: url(toolButton.png) 0 5 0 5;
+}
+
+span.callButton a {
+  position: absolute;
+  top: 8px;
+  right: 6px;
+  width: 32px;
+  height: 30px;
+  background: url(callButton.png) no-repeat 0 0;
+  z-index: 1;
+}
+
+span.callButton a span.hawphonelabel {
+  display: none;
+}
+
+input#hawinputsubmit {
+  right: 6px;
+  border-width: 0 5px;
+  -webkit-border-image: url(blueButton.png) 0 5 0 5;
+}
+
+span.backButton br,
+span.toolButton br,
+span.leftButton br,
+span.callButton br,
+span.iLink br,
+#hawlinkset br {
+  display: none;
+}
+
+span.iLink img {
+  margin-right: 6px;
+}
+
+form {
+  margin: 6px;
+  padding: 6px 6px 0 6px;
+  background: #FFFFFF;
+  -webkit-border-radius: 10px;
+  border: 1px solid #999999;
+}
+
+form label {
+  /*margin: 16px 0 0 6px;*/
+  font-size: 14px;
+  color: #666666;
+}
+
+form input {
+  margin-top: 12px;
+}
+	
+form input.hawinputtext,
+form input.hawinputpassword {
+  width: auto;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+table {
+  margin: 6px;
+  padding: 6px;
+  background: #FFFFFF;
+  border: 1px solid #999999;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #999999;
+  padding: 3px;
+}

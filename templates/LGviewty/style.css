@@ -1,0 +1,36 @@
+/* HAWHAW skin stylesheet for LG Viewty phone */
+
+body {
+  background-color: #FFFFFF;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+#skin {
+  color: #FFFFFF;
+  margin: 0px auto;
+  padding: 0px;
+  text-align: left;
+  width: 239px;
+  height: 417px;
+  background-image: url(gui.jpg);
+}
+
+#display {
+  position: relative;
+  top: 65px;
+  left: 41px;
+  width: 160px;
+  height: 255px;
+  overflow: auto;
+}
+
+#display a, #display a:link, #display a:active{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#display a:hover{
+  text-decoration: underline;
+}

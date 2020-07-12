@@ -1,0 +1,23 @@
+[+] = Added
+[-] = Removed
+[/] = Changed/Updated
+[*] = Notice/Will be added in the future
+
+V1.1 [RTU]
+[+] Added the articles plugin by LadyHacker
+[+] XOOPS Code replacing
+[+] Posibility to style xoBile (For xhtml compatible phones)
+[/] Updated iphone skin
+[/] Cleaned up the code alot
+[*] The module is from now on only XOOPS 2.4 and PHP 5 compatible.
+
+V1.1.1 [RTU]
+[/] Fixed debug problem
+
+V1.2 [RTT]
+[+] WURFL based detection/redirection
+[+] Simple / Advanced style switch
+[+] Class function to check permission
+[+] Permission check in system plugin
+[+] Permission check in index.php
+[+] Temporary user page (Will be replaced by profile plugin)
